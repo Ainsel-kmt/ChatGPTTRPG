@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRPGゲーム</title>
+  <link rel="stylesheet" href="styles-game.css">
+</head>
+<body>
+  <div id="app">
+    <div id="main">
+      <div id="scenario-container">
+        <div id="scenario-display"></div>
+        <div id="chat-window">
+          <div id="messages"></div>
+          <textarea id="user-input" placeholder="メッセージを入力..."></textarea>
+          <button id="send-button">送信</button>
+        </div>
+        <button id="character-sheet-button">キャラクターシートを作成する</button>
+        <button id="scenario-button">シナリオ作成ページへ</button>
+        <div id="dice-roll">
+          <div id="custom-dice">
+            <input type="number" id="custom-dice-input" placeholder="カスタムダイスを入力 (例: 20)" />
+            <button id="custom-roll-button">カスタムダイスをロールする</button>
+          </div>
+          <div id="dice-result"></div>
+        </div>
+      </div>
+      <div id="character-container">
+        <div id="character-display"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
