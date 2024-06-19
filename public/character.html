@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクターシート作成</title>
+  <link rel="stylesheet" href="styles-character.css">
+</head>
+<body>
+  <div id="app">
+    <h1>キャラクターシート作成</h1>
+    <form id="character-form">
+      <!-- 基本情報 -->
+      <h2>基本情報</h2>
+      <label for="character-name">名前:</label>
+      <input type="text" id="character-name" name="character-name" required>
+      <label for="character-gender">性別:</label>
+      <select id="character-gender" name="character-gender" required>
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+        <option value="other">その他</option>
+      </select>
+      <label for="character-age">年齢:</label>
+      <input type="number" id="character-age" name="character-age" required min="0">
+
+      <!-- 能力値 -->
+      <h2>能力値</h2>
+      <button type="button" onclick="rollAbilityScores()">能力値をロールする</button>
+      <div id="ability-scores"></div>
+
+      <!-- 職業 -->
+      <h2>職業</h2>
+      <label for="character-occupation">職業:</label>
+      <input type="text" id="character-occupation" name="character-occupation" required>
+
+      <!-- 技能 -->
+      <h2>技能</h2>
+      <div id="skills">
+        <label for="skill-1">技能1:</label>
+        <input type="text" id="skill-1" name="skill-1" required>
+        <label for="skill-1-points">ポイント:</label>
+        <input type="number" id="skill-1-points" name="skill-1-points" required min="0" max="100">
+        
+        <label for="skill-2">技能2:</label>
+        <input type="text" id="skill-2" name="skill-2" required>
+        <label for="skill-2-points">ポイント:</label>
+        <input type="number" id="skill-2-points" name="skill-2-points" required min="0" max="100">
+        
+        <!-- 必要に応じてさらに技能を追加 -->
+      </div>
+
+      <!-- バックストーリー -->
+      <h2>バックストーリー</h2>
+      <label for="character-backstory">バックストーリー:</label>
+      <textarea id="character-backstory" name="character-backstory" required></textarea>
+
+      <!-- 装備 -->
+      <h2>装備</h2>
+      <label for="character-equipment">装備:</label>
+      <textarea id="character-equipment" name="character-equipment" required></textarea>
+
+      <button type="button" id="save-character">キャラクターを保存する</button>
+    </form>
+    <button id="back-to-game">ゲームに移動</button>
+    <div id="character-display"></div>
+  </div>
+
+  <script src="character.js"></script>
+</body>
+</html>
